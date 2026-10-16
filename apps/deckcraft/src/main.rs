@@ -162,7 +162,7 @@ fn startup(mut control_port: Option<u16>, args: impl IntoIterator<Item = String>
 }
 
 fn app_icon() -> Option<egui::IconData> {
-    let png: &[u8] = include_bytes!("../../../assets/app-icon/hicolor/256x256/apps/ai.storyteller.deckcraft.png");
+    let png: &[u8] = include_bytes!("../../../assets/app-icon/deckcraft-256.png");
     eframe::icon_data::from_png_bytes(png).map_err(|e| log::warn!("app icon: {e}")).ok()
 }
 
