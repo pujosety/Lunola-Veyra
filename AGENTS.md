@@ -1,13 +1,13 @@
 # AGENTS.md — rules for every agent and contributor
 
-DeckCraft is a clean-room, open-source, pure-Rust presentation application targeting Microsoft
+Lunola Veyra is a clean-room, open-source, pure-Rust presentation application targeting Microsoft
 PowerPoint parity — and superiority (speed, openness, agent control). It runs natively on macOS,
 Windows, Linux and FreeBSD, and on the web via WASM. Siblings with the same conventions:
 PhotoCraft, VectorCraft, FilmCraft, LightCraft, PdfCraft, EffectCraft, DesignCraft
 (`../<app>`).
 
 Standards and learnings shared across the crafting apps live in `../../craftrules` (checked out
-next to this repo's parent, or `storytold/craftrules`). Read its `AGENTS.md` at the start of a
+next to this repo's parent, or `lunola/craftrules`). Read its `AGENTS.md` at the start of a
 session, follow its standards, and contribute reusable learnings back there. Never code: repos
 don't share code.
 
@@ -32,7 +32,7 @@ the app renders from those.
   product" includes PowerPoint, Office, Windows and the fonts they install (Aptos, Calibri,
   Cambria, Segoe, Consolas, Wingdings…).
 - This holds even when the vendor publishes the material under an open licence, if it is **visual
-  design**: DeckCraft does not embed or reference Adobe's Source Sans/Serif/Han families or Noto
+  design**: Lunola Veyra does not embed or reference Adobe's Source Sans/Serif/Han families or Noto
   CJK (Source Han rebranded); `crates/fonts/build.rs` excludes them.
 - **Never** recreate, trace, redraw or closely imitate a vendor icon, theme or graphic. Our icons
   are drawn in code or come from openly licensed sets (Lucide, ISC), and our themes, colours,
@@ -50,15 +50,15 @@ Ubuntu-Font-1.0, Bitstream-Vera); Creative Commons (CC0-1.0, CC-BY-4.0, CC-BY-SA
 domain; or contributor-original (created by a contributor who licenses it under
 `MIT OR Apache-2.0`).
 
-One narrow exception: the ArtCraft name, wordmark and logos in `docs/brand/` are trademarks of the
-ArtCraft Team (not open source, terms in `docs/brand/LICENSE-brand.txt`), used only unmodified to
+One narrow exception: the Lunola name, wordmark and logos in `docs/brand/` are trademarks of the
+Lunola Team (not open source, terms in `docs/brand/LICENSE-brand.txt`), used only unmodified to
 identify the project.
 
 Forbidden: system fonts that are not openly licensed, vendor emoji artwork, stock photos, "free
 for personal use" material, screenshots of other people's software, anything whose licence you
 cannot prove from its original source.
 
-**Screenshots of DeckCraft** are contributor-original. Everything visible in them must itself be
+**Screenshots of Lunola Veyra** are contributor-original. Everything visible in them must itself be
 allowed: our UI, our/Lucide icons, OFL fonts, and decks built only from allowed assets.
 
 ### 1.3 Every asset is attributed
@@ -68,8 +68,8 @@ allowed: our UI, our/Lucide icons, OFL fonts, and decks built only from allowed 
   commit), licence and use. `cargo xtask assets` fails if a file under `assets/`, `docs/images/`
   or `docs/brand/` has no row.
 - **`NOTICE`** keeps the notices the licences require.
-- Fonts live in [storytold/craft-fonts](https://github.com/storytold/craft-fonts), never in this
-  repo (craftrules `standards/fonts.md`). DeckCraft embeds its `fonts/latin-manifest.txt` and
+- Fonts live in [lunola/craft-fonts](https://github.com/lunola/craft-fonts), never in this
+  repo (craftrules `standards/fonts.md`). Lunola Veyra embeds its `fonts/latin-manifest.txt` and
   `fonts/manifest.txt` when built with `CRAFT_FONTS_DIR` (local dev: `.cargo/config.toml` points at
   `../craft-fonts`).
 
@@ -98,7 +98,7 @@ once and tell the user.
 
 ## 3. Never crash
 
-People trust DeckCraft with their talks; a crash loses work. **This outranks feature work.**
+People trust Lunola Veyra with their talks; a crash loses work. **This outranks feature work.**
 Standard: craftrules `standards/never-crash.md`.
 - No `unwrap()`, `expect()`, `panic!`, `unreachable!`, `todo!`, `unimplemented!` in non-test
   code; no `unsafe` (`unsafe_code = "forbid"`). Every production crate root carries
@@ -169,7 +169,7 @@ docs follow craftrules `standards/progress-docs.md`:
 | `docs/roadmap.md` | Current focus, the beta plan, milestones |
 | `docs/parity-checklist.md` | Feature rows scored D/P/M; `cargo xtask parity` regenerates its summary |
 | `docs/file-format-parity.md`, `ui-parity.md`, `hardware-parity.md`, `localization-parity.md`, `animation-parity.md`, `slideshow-parity.md` | Per-dimension and per-feature detail |
-| `docs/architecture.md` | How DeckCraft is built today |
+| `docs/architecture.md` | How Lunola Veyra is built today |
 
 When a task lands, re-score its checklist row, delete or update its `gaps.md` entry, add a line to
 the `ROADMAP.md` progress log, and update each touched doc's status line and revision history.

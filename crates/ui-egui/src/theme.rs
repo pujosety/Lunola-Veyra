@@ -1,7 +1,22 @@
 //! Design tokens (light, PowerPoint-like; and dark) and fonts for the UI.
+//!
+//! Lunola brand tokens: accent `#F18A49`, shared spacing and typography values kept
+//! consistent with the other Lunola apps (GridCraft, WordCraft).
 
 use egui::{Color32, CornerRadius, FontData, FontDefinitions, FontFamily, Stroke, Visuals};
 use serde::{Deserialize, Serialize};
+
+/// Lunola brand accent (#F18A49).
+pub const LUNOLA_ACCENT: Color32 = Color32::from_rgb(0xF1, 0x8A, 0x49);
+/// The app name shown in the window title and about dialogs.
+pub const LUNOLA_BRAND: &str = "Lunola Veyra";
+
+/// Shared spacing values (consistent across Lunola apps).
+pub const ITEM_SPACING_X: f32 = 6.0;
+pub const ITEM_SPACING_Y: f32 = 4.0;
+pub const BUTTON_PADDING_X: f32 = 8.0;
+pub const BUTTON_PADDING_Y: f32 = 3.0;
+pub const INTERACT_SIZE_Y: f32 = 22.0;
 
 #[derive(Clone, Copy, Debug, Default, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
@@ -30,7 +45,7 @@ pub struct Tokens {
     pub hover: Color32,
     pub pressed: Color32,
     pub selected: Color32,
-    /// DeckCraft's accent (tabs underline, selected thumbnail, primary buttons).
+    /// Lunola Veyra's accent (tabs underline, selected thumbnail, primary buttons).
     pub accent: Color32,
     pub accent_text: Color32,
     pub contextual: Color32,
@@ -60,13 +75,13 @@ impl Tokens {
             hover: Color32::from_rgb(0xEB, 0xEB, 0xEB),
             pressed: Color32::from_rgb(0xDE, 0xDE, 0xDE),
             selected: Color32::from_rgb(0xE6, 0xE6, 0xE6),
-            accent: Color32::from_rgb(0xD9, 0x5A, 0x1A),
+            accent: Color32::from_rgb(0xF1, 0x8A, 0x49),
             accent_text: Color32::WHITE,
-            contextual: Color32::from_rgb(0xC2, 0x4E, 0x14),
+            contextual: Color32::from_rgb(0xD9, 0x77, 0x42),
             selection: Color32::from_rgb(0x7A, 0x7A, 0x7A),
             handle_fill: Color32::WHITE,
             handle_stroke: Color32::from_rgb(0x6E, 0x6E, 0x6E),
-            guide: Color32::from_rgb(0xE8, 0x5D, 0x2A),
+            guide: Color32::from_rgb(0xF5, 0x9E, 0x5F),
             caret: Color32::BLACK,
             text_selection: Color32::from_rgba_unmultiplied(0x5A, 0x8F, 0xE0, 90),
             field_bg: Color32::WHITE,
@@ -88,13 +103,13 @@ impl Tokens {
             hover: Color32::from_rgb(0x40, 0x40, 0x40),
             pressed: Color32::from_rgb(0x4C, 0x4C, 0x4C),
             selected: Color32::from_rgb(0x47, 0x47, 0x47),
-            accent: Color32::from_rgb(0xF2, 0x6B, 0x1D),
+            accent: Color32::from_rgb(0xF1, 0x8A, 0x49),
             accent_text: Color32::WHITE,
-            contextual: Color32::from_rgb(0xF5, 0x8A, 0x4B),
+            contextual: Color32::from_rgb(0xF5, 0x9E, 0x5F),
             selection: Color32::from_rgb(0xAA, 0xAA, 0xAA),
             handle_fill: Color32::WHITE,
             handle_stroke: Color32::from_rgb(0x6E, 0x6E, 0x6E),
-            guide: Color32::from_rgb(0xF2, 0x8A, 0x4B),
+            guide: Color32::from_rgb(0xF5, 0x9E, 0x5F),
             caret: Color32::BLACK,
             text_selection: Color32::from_rgba_unmultiplied(0x5A, 0x8F, 0xE0, 90),
             field_bg: Color32::from_rgb(0x2A, 0x2A, 0x2A),
@@ -143,9 +158,9 @@ pub fn apply(ctx: &egui::Context, t: &Tokens) {
     v.popup_shadow = egui::epaint::Shadow { offset: [0, 3], blur: 12, spread: 0, color: t.shadow };
     ctx.set_visuals(v);
     ctx.global_style_mut(|s| {
-        s.spacing.item_spacing = egui::vec2(6.0, 4.0);
-        s.spacing.button_padding = egui::vec2(6.0, 3.0);
-        s.spacing.interact_size.y = 22.0;
+        s.spacing.item_spacing = egui::vec2(ITEM_SPACING_X, ITEM_SPACING_Y);
+        s.spacing.button_padding = egui::vec2(BUTTON_PADDING_X, BUTTON_PADDING_Y);
+        s.spacing.interact_size.y = INTERACT_SIZE_Y;
         s.text_styles.insert(egui::TextStyle::Body, egui::FontId::proportional(13.0));
         s.text_styles.insert(egui::TextStyle::Button, egui::FontId::proportional(13.0));
         s.text_styles.insert(egui::TextStyle::Small, egui::FontId::proportional(11.0));

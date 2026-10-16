@@ -51,9 +51,6 @@ pub fn fill_path(
             // its edges); a radial one ends on the circle around it, from a focus placed in the
             // shape's own box (PowerPoint's "from corner" presets centre the tile on the corner).
             let tile = tile_box(bounds, g.tile);
-            let stops: Vec<(f64, Rgba)> = g.stops.iter().map(|s| (s.pos, shade(rctx.color(&s.color, ph), mode))).collect();
-            ctx.set_paint(gradient(&g.shape, stops, bounds, alpha));
-
             let mut stops: Vec<(f64, Rgba)> = g.stops.iter().map(|s| (s.pos.clamp(0.0, 1.0), shade(rctx.color(&s.color, ph), mode))).collect();
             stops.sort_by(|a, b| a.0.total_cmp(&b.0));
             // Rectangle and outline paths: rasterised (see `pathgrad`).

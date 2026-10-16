@@ -1206,7 +1206,7 @@ struct Under {
 
 impl Under {
     fn visible(&self, id: ShapeId) -> bool {
-        self.shapes.iter().zip(&self.visible).find(|(h, _)| h.id == id).is_none_or(|(_, v)| *v)
+        self.shapes.iter().zip(&self.visible).find(|(h, _)| h.id == id).is_some_and(|(_, v)| *v)
     }
 }
 
@@ -1754,7 +1754,7 @@ fn presenter_window(ctx: &egui::Context, show: &mut Show, doc: &Presentation, no
     };
     ctx.show_viewport_immediate(
         egui::ViewportId::from_hash_of("deckcraft_presenter"),
-        egui::ViewportBuilder::default().with_title("Presenter View — DeckCraft").with_inner_size([1100.0, 700.0]),
+        egui::ViewportBuilder::default().with_title("Presenter View — Lunola Veyra").with_inner_size([1100.0, 700.0]),
         |ui, _| {
             if !keyboard(ui.ctx(), show, doc, now) {
                 *keep = false;
