@@ -2610,6 +2610,7 @@ pub fn about(_app: &mut SlideApp, ui: &mut Ui) {
         ui.label(egui::RichText::new("Lunola Veyra").font(theme::bold(22.0)));
         ui.label(egui::RichText::new(version_line()).color(t.text_dim));
         ui.add_space(6.0);
+        ui.label(egui::RichText::new("Make Ideas Shine.").color(t.text_dim));
         ui.label("Presentations and slide shows, rebuilt from scratch in pure Rust.");
         ui.label("An open-source, clean-room project. Not affiliated with Microsoft.");
         ui.add_space(6.0);
@@ -2638,8 +2639,8 @@ pub fn version_line() -> String {
 
 /// Lunola Veyra's mark, drawn in code: a slide card with a play triangle in our orange.
 pub fn paint_logo(p: &egui::Painter, r: Rect) {
-    let orange = Color32::from_rgb(0xF2, 0x6B, 0x1D);
-    let deep = Color32::from_rgb(0xC2, 0x4E, 0x14);
+    let orange = Color32::from_rgb(0xF1, 0x8A, 0x49);
+    let deep = Color32::from_rgb(0xD9, 0x77, 0x42);
     let card = r.shrink(r.width() * 0.08);
     p.rect_filled(card.translate(vec2(r.width() * 0.04, r.width() * 0.05)), CornerRadius::same((r.width() * 0.14) as u8), deep);
     p.rect_filled(card, CornerRadius::same((r.width() * 0.14) as u8), orange);

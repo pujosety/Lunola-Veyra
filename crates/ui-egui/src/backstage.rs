@@ -693,6 +693,7 @@ fn home(app: &mut SlideApp, ui: &mut Ui, bs: &mut Backstage, out: &mut Outcome) 
         let (r, _) = ui.allocate_exact_size(vec2(36.0, 36.0), Sense::hover());
         crate::dialogs::paint_logo(ui.painter(), r);
         ui.label(RichText::new("Lunola Veyra").font(theme::bold(24.0)).color(t.text));
+        ui.label(RichText::new("Make Ideas Shine.").font(theme::font(14.0)).color(t.text_dim));
     });
     ui.add_space(18.0);
     ui.horizontal(|ui| {
@@ -1357,6 +1358,7 @@ fn account(app: &mut SlideApp, ui: &mut Ui) {
                 let (r, _) = ui.allocate_exact_size(vec2(40.0, 40.0), Sense::hover());
                 crate::dialogs::paint_logo(ui.painter(), r);
                 ui.label(RichText::new("Lunola Veyra").font(theme::bold(24.0)).color(t.text));
+                ui.label(RichText::new("Make Ideas Shine.").font(theme::font(14.0)).color(t.text_dim));
             });
             dim(ui, &crate::dialogs::version_line());
             dim(ui, "Open source under MIT OR Apache-2.0. Not affiliated with Microsoft.");

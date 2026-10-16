@@ -15,7 +15,7 @@ use egui::{Align2, Color32, FontId, Painter, Pos2, Rect, Shape, Stroke, StrokeKi
 /// Accent blue.
 pub const BLUE: Color32 = Color32::from_rgb(0x2E, 0x6F, 0xD8);
 /// Accent orange.
-pub const ORANGE: Color32 = Color32::from_rgb(0xF2, 0x6B, 0x1D);
+pub const ORANGE: Color32 = Color32::from_rgb(0xF1, 0x8A, 0x49);
 /// Accent green.
 pub const GREEN: Color32 = Color32::from_rgb(0x2E, 0xA3, 0x6F);
 /// Accent purple.
