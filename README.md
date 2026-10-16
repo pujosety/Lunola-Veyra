@@ -56,6 +56,13 @@
   <a href="#license-and-credits">License</a>
 </p>
 
+<p align="center">
+  <a href="CHANGELOG.md">Changelog</a> ·
+  <a href="KNOWN_ISSUES.md">Known Issues</a> ·
+  <a href="ROADMAP.md">Roadmap</a> ·
+  <a href="DELIVERY.md">Delivery</a>
+</p>
+
 ## What works today
 
 Lunola Veyra is in alpha, heading for beta (see the [roadmap](ROADMAP.md)).
