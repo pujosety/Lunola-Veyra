@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 160" width="500" height="160">
+  <defs>
+    <linearGradient id="veyra-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F18A49;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D4682A;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <g transform="translate(20, 20)">
+    <rect x="0" y="0" width="120" height="120" rx="18" fill="url(#veyra-accent)"/>
+    <rect x="16" y="24" width="88" height="56" rx="4" fill="#FFFFFF"/>
+    <rect x="16" y="24" width="88" height="8" rx="4" fill="#F18A49"/>
+    <path d="M60 42 L63 51 L72 51 L65 57 L67 66 L60 61 L53 66 L55 57 L48 51 L57 51 Z" fill="#F18A49"/>
+    <line x1="60" y1="80" x2="60" y2="100" stroke="#1F2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="60" y1="100" x2="44" y2="108" stroke="#1F2937" stroke-width="3" stroke-linecap="round"/>
+    <line x1="60" y1="100" x2="76" y2="108" stroke="#1F2937" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <text x="160" y="75" font-family="Nunito, Quicksand, Arial, sans-serif" font-size="52" font-weight="800" fill="#1F2937">lunola</text>
+  <text x="160" y="120" font-family="Nunito, Quicksand, Arial, sans-serif" font-size="52" font-weight="800" fill="#F18A49">veyra</text>
+</svg>
