@@ -8,8 +8,7 @@ Lunola Veyra 1.0.0.
 ### Rust toolchain
 
 Lunola Veyra requires **Rust 1.95 or later**. The workspace `Cargo.toml` specifies
-`rust-version = "1.95"`. Earlier versions of `rustc` (including 1.93) will fail to compile
-the project. Install the latest stable Rust from [rustup.rs](https://rustup.rs/).
+`rust-version = "1.95"`. Verified with **rustc 1.99.1 stable** — `cargo check -p deckcraft-ui-egui` passes.
 
 ### Krilla PDF dependency
 
@@ -33,8 +32,9 @@ dependency** in all environments. If you encounter build failures related to Kri
 
 ### Automated tests
 
-**No automated test run was performed** as part of the Lunola Veyra rebranding delivery.
-The existing test suite (unit tests, integration tests, and parity checks) should be run
+**`cargo check -p deckcraft-ui-egui`**: ✅ PASS (rustc 1.99.1)
+
+Full `cargo test --workspace`: NOT RUN. The existing test suite (unit tests, integration tests, and parity checks) should be run
 before publishing a release:
 
 ```sh
