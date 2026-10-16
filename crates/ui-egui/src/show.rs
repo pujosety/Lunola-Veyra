@@ -1206,7 +1206,7 @@ struct Under {
 
 impl Under {
     fn visible(&self, id: ShapeId) -> bool {
-        self.shapes.iter().zip(&self.visible).find(|(h, _)| h.id == id).is_none_or(|(_, v)| *v)
+        self.shapes.iter().zip(&self.visible).find(|(h, _)| h.id == id).is_some_and(|(_, v)| *v)
     }
 }
 
