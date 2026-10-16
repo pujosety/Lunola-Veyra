@@ -13,7 +13,7 @@ use deckcraft_model::text::{Paragraph, TextBody};
 use deckcraft_model::{LayoutType, Presentation, defaults};
 
 pub const MIMETYPE: &str = "application/vnd.storyteller.deckcraft+zip";
-/// Files written before the SlideCraft → DeckCraft rename (`.slidecraft`) are still read.
+/// Files written before the SlideCraft → Lunola Veyra rename (`.slidecraft`) are still read.
 pub const LEGACY_MIMETYPE: &str = concat!("application/vnd.storyteller.", "slide", "craft+zip");
 pub const EXTENSION: &str = "deckcraft";
 /// Format version written into the manifest.
@@ -34,7 +34,7 @@ struct Budget {
 
 #[derive(Debug, thiserror::Error)]
 pub enum FormatError {
-    #[error("not a DeckCraft file: {0}")]
+    #[error("not a Lunola Veyra file: {0}")]
     NotOurs(String),
     #[error("damaged file: {0}")]
     Damaged(String),
@@ -65,7 +65,7 @@ pub fn save(p: &Presentation) -> Result<Vec<u8>> {
         let m = Manifest {
             format: "deckcraft".into(),
             version: VERSION,
-            generator: format!("DeckCraft {}", env!("CARGO_PKG_VERSION")),
+            generator: format!("Lunola Veyra {}", env!("CARGO_PKG_VERSION")),
             presentation: p.clone(),
         };
         let json = serde_json::to_vec(&finite::Finite(&m)).map_err(|e| FormatError::Write(e.to_string()))?;
@@ -152,7 +152,7 @@ fn load_within(bytes: &[u8], budget: Budget) -> Result<(Presentation, Vec<String
         let name = format!("media/{}", item.id.0);
         let linked_only = item.link.is_some() && z.index_for_name(&name).is_none();
         if z.by_name(&name).is_ok_and(|f| f.size() > left) {
-            return Err(FormatError::Damaged("embedded media is larger than DeckCraft can open".into()));
+            return Err(FormatError::Damaged("embedded media is larger than Lunola Veyra can open".into()));
         }
         match read_entry_max(&mut z, &name, left.min(MAX_ENTRY)) {
             Ok(data) => {
@@ -259,7 +259,7 @@ fn failure(src: &[u8]) -> std::result::Result<Manifest, (String, (usize, usize))
 }
 
 /// Parse `presentation.json`. serde_json writes a NaN or infinite number as `null`, which then
-/// fails to read back as a number ("invalid type: null, expected f64"), so DeckCraft could save
+/// fails to read back as a number ("invalid type: null, expected f64"), so Lunola Veyra could save
 /// a file it couldn't open. Each such `null` is read as 0 instead ([`repair`] then brings the
 /// value into range); anything else that doesn't parse is damage.
 ///

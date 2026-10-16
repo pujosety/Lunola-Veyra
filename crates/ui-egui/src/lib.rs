@@ -1,4 +1,4 @@
-//! DeckCraft's egui frontend: a PowerPoint-style UI over `deckcraft-engine`.
+//! Lunola Veyra's egui frontend: a PowerPoint-style UI over `deckcraft-engine`.
 //!
 //! The UI is thin: every action goes through [`SlideApp::run`], which handles UI commands
 //! (views, panes, zoom) here and sends everything else to the engine. The ribbon, menus,
@@ -191,7 +191,7 @@ fn command_for(purpose: FilePurpose, name: &str, bytes: &[u8]) -> Result<&'stati
         FilePurpose::Open => open_command(name),
         FilePurpose::Infer => infer_command(name, bytes),
     };
-    cmd.ok_or_else(|| format!("{name}: DeckCraft can't open this kind of file"))
+    cmd.ok_or_else(|| format!("{name}: Lunola Veyra can't open this kind of file"))
 }
 
 /// How long a transient status message stays visible.
@@ -392,7 +392,7 @@ pub const UI_COMMANDS: &[(&str, &str, Option<&str>, &str)] = &[
         Some("Cmd+P"),
         "{layout?, perPage?, slides?, includeHidden?, frame?, paper?: letter|a4|legal|a3, orientation?: portrait|landscape}",
     ),
-    ("app.about", "About DeckCraft", None, "{}"),
+    ("app.about", "About Lunola Veyra", None, "{}"),
     ("app.palette", "Command Palette", Some("Cmd+Shift+P"), "{}"),
     ("app.preferences", "Preferences…", Some("Cmd+,"), "{}"),
     ("app.openDialog", "Open…", None, "{purpose?}"),
@@ -744,7 +744,7 @@ impl SlideApp {
             "deckcraft" => ("deckcraft", "deckcraft", false),
             "gif" => ("gif", "gif", false),
             other => {
-                self.set_status(format!("DeckCraft can't export “{other}”"));
+                self.set_status(format!("Lunola Veyra can't export “{other}”"));
                 return false;
             }
         };
@@ -800,7 +800,7 @@ impl SlideApp {
         }
     }
 
-    /// File › Print: DeckCraft prints through a PDF. On the desktop the PDF (with the Print page's
+    /// File › Print: Lunola Veyra prints through a PDF. On the desktop the PDF (with the Print page's
     /// layout, slides and options) is written to the temporary folder and opened in the system's
     /// PDF viewer, which has the printers; on the web it downloads.
     pub fn print_pdf(&mut self, params: Value) -> bool {
@@ -1755,7 +1755,7 @@ impl SlideApp {
     /// Offer the copy or cut on the system clipboard.
     ///
     /// Slides go out as plain text. Text goes out as HTML plus the same plain words, so a paste
-    /// back into DeckCraft still uses the internal clipboard. A textless shape leaves the
+    /// back into Lunola Veyra still uses the internal clipboard.
     /// invisible [`OBJECTS_MARKER`] rather than a picture: with only an image on the clipboard
     /// egui-winit drops Ctrl+V, and the shortcut could no longer paste the shape here (#182).
     fn publish_clipboard(&mut self, ctx: &egui::Context, cut: bool) {

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Build and package DeckCraft for FreeBSD:
+# Build and package Lunola Veyra for FreeBSD:
 #
 #   $DIST/deckcraft-<version>-freebsd-<arch>.tar.gz   bin/, share/ (desktop entry, icons, AppStream)
 #

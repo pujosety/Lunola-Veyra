@@ -1,4 +1,4 @@
-//! The DeckCraft renderer: draws slides, layouts and masters with `vello_cpu`.
+//! The Lunola Veyra renderer: draws slides, layouts and masters with `vello_cpu`.
 //!
 //! One code path serves the editor canvas, thumbnails, image/PDF-raster export and the slide show:
 //! [`render_slide`] draws the background, the master and layout graphics, then the slide's shapes
@@ -1074,7 +1074,7 @@ impl Renderer {
                 paint::picture(ctx, f.pres, &paint::resolved(rctx, pf, None), bounds, m, t);
                 ctx.pop_layer();
             }
-            // An object DeckCraft doesn't model (an embedded OLE object, an unknown graphic): its
+            // An object Lunola Veyra doesn't model (an embedded OLE object, an unknown graphic): its
             // preview picture, stretched over the frame, as PowerPoint draws it.
             ShapeKind::Opaque { preview: Some(media), .. } => {
                 ctx.set_transform(m);
@@ -2079,7 +2079,7 @@ pub fn text_transform(m: Affine, tr: Rect, rotation: f64) -> Affine {
     t
 }
 
-/// The WordArt warp of `s`'s text over its text rectangle `tr`, if it has one DeckCraft draws.
+/// The WordArt warp of `s`'s text over its text rectangle `tr`, if it has one Lunola Veyra draws.
 pub fn text_warp(rctx: &Ctx, s: &Shape, tr: Rect) -> Option<deckcraft_geom::warp::Warp> {
     let bp = resolve::body(rctx, s);
     let name = bp.warp.as_deref()?;

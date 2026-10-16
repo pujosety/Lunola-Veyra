@@ -22,7 +22,7 @@ pub const MAX_LEVEL: u8 = 8;
 /// Most top-level shapes a layout draws.
 const MAX_SHAPES: usize = 40;
 
-/// DeckCraft's layouts, with the names PowerPoint's gallery gives them.
+/// Lunola Veyra's layouts, with the names PowerPoint's gallery gives them.
 pub const LAYOUTS: [(&str, &str); 45] = [
     ("list", "Vertical Bullet List"),
     ("blockList", "Basic Block List"),

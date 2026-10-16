@@ -1,13 +1,13 @@
-# DeckCraft PDF export
+# Lunola Veyra PDF export
 
-DeckCraft uses `craft-pdf` for writer construction, metadata, fallible font preparation and
+Lunola Veyra uses `craft-pdf` for writer construction, metadata, fallible font preparation and
 final serialization. Slide rasterization, the selectable text overlay, font discovery and
 shaping, hyperlinks, bookmarks, notes and handout layout remain app-owned. The existing
 renderer also resolves and rasterizes WMF/EMF pictures before export.
 
 Only the shared `write` feature is enabled, with default features disabled. Krilla retains
 its raster-image and simple-text features, including notes/footer shaping. PDF embedding is
-disabled: DeckCraft does not use it. The production exporter has no Hayro parser, interpreter,
+disabled: Lunola Veyra does not use it. The production exporter has no Hayro parser, interpreter,
 image-decoder, fallback-font or CMap dependencies. Tests use `hayro-syntax` 0.7.2 directly,
 with only `std` enabled, to inspect the generated PDFs.
 
@@ -21,7 +21,7 @@ unchanged. Native unwind guards cannot catch WASM aborts or process-wide allocat
 ## Building and validation
 
 Rust 1.95 or newer is required. The workspace pins `craft-pdf` 0.1.0 and its Krilla 0.8.2
-patch to `https://github.com/storytold/craft-libs` revision
+patch to `https://github.com/lunola/craft-libs` revision
 `39adbdf756569c8e03adb747d5e063f468ca98c1`. Both packages resolve from that immutable Git source;
 a sibling checkout is unnecessary. Publish and review this shared-library prerequisite
 before publishing the app migration, so fresh CI and release builds can fetch it.
