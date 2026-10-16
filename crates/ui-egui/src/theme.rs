@@ -1,7 +1,22 @@
 //! Design tokens (light, PowerPoint-like; and dark) and fonts for the UI.
+//!
+//! Lunola brand tokens: accent `#F18A49`, shared spacing and typography values kept
+//! consistent with the other Lunola apps (GridCraft, WordCraft).
 
 use egui::{Color32, CornerRadius, FontData, FontDefinitions, FontFamily, Stroke, Visuals};
 use serde::{Deserialize, Serialize};
+
+/// Lunola brand accent (#F18A49).
+pub const LUNOLA_ACCENT: Color32 = Color32::from_rgb(0xF1, 0x8A, 0x49);
+/// The app name shown in the window title and about dialogs.
+pub const LUNOLA_BRAND: &str = "Lunola Veyra";
+
+/// Shared spacing values (consistent across Lunola apps).
+pub const ITEM_SPACING_X: f32 = 6.0;
+pub const ITEM_SPACING_Y: f32 = 4.0;
+pub const BUTTON_PADDING_X: f32 = 8.0;
+pub const BUTTON_PADDING_Y: f32 = 3.0;
+pub const INTERACT_SIZE_Y: f32 = 22.0;
 
 #[derive(Clone, Copy, Debug, Default, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
@@ -143,9 +158,9 @@ pub fn apply(ctx: &egui::Context, t: &Tokens) {
     v.popup_shadow = egui::epaint::Shadow { offset: [0, 3], blur: 12, spread: 0, color: t.shadow };
     ctx.set_visuals(v);
     ctx.global_style_mut(|s| {
-        s.spacing.item_spacing = egui::vec2(6.0, 4.0);
-        s.spacing.button_padding = egui::vec2(6.0, 3.0);
-        s.spacing.interact_size.y = 22.0;
+        s.spacing.item_spacing = egui::vec2(ITEM_SPACING_X, ITEM_SPACING_Y);
+        s.spacing.button_padding = egui::vec2(BUTTON_PADDING_X, BUTTON_PADDING_Y);
+        s.spacing.interact_size.y = INTERACT_SIZE_Y;
         s.text_styles.insert(egui::TextStyle::Body, egui::FontId::proportional(13.0));
         s.text_styles.insert(egui::TextStyle::Button, egui::FontId::proportional(13.0));
         s.text_styles.insert(egui::TextStyle::Small, egui::FontId::proportional(11.0));

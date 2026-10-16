@@ -118,10 +118,10 @@ fn services(inbox: Inbox, ctx: egui::Context) -> Services {
             let inbox = open_inbox.clone();
             let ctx = ctx.clone();
             let dialog = match purpose {
-                "picture" => rfd::AsyncFileDialog::new().add_filter("Pictures", PICTURE_EXTS),
-                "audio" => rfd::AsyncFileDialog::new().add_filter("Audio", AUDIO_EXTS),
-                "video" => rfd::AsyncFileDialog::new().add_filter("Video", VIDEO_EXTS),
-                _ => rfd::AsyncFileDialog::new().add_filter("Presentations", PRESENTATION_EXTS),
+                "picture" => rfd::AsyncFileDialog::new().set_title("Lunola Veyra").add_filter("Pictures", PICTURE_EXTS),
+                "audio" => rfd::AsyncFileDialog::new().set_title("Lunola Veyra").add_filter("Audio", AUDIO_EXTS),
+                "video" => rfd::AsyncFileDialog::new().set_title("Lunola Veyra").add_filter("Video", VIDEO_EXTS),
+                _ => rfd::AsyncFileDialog::new().set_title("Lunola Veyra").add_filter("Presentations", PRESENTATION_EXTS),
             };
             wasm_bindgen_futures::spawn_local(async move {
                 let Some(file) = dialog.pick_file().await else {

@@ -513,6 +513,8 @@ pub struct SlideApp {
     next_file_id: u64,
     /// Picks and drops whose bytes have not arrived yet.
     pending_files: Vec<PendingFile>,
+    /// The window title last sent to the viewport (only re-sent when it changes).
+    sent_title: String,
 }
 
 fn grid_options_touched(p: &Value) -> bool {
@@ -580,6 +582,7 @@ impl SlideApp {
             twisting: false,
             next_file_id: 1,
             pending_files: Vec::new(),
+            sent_title: String::new(),
         }
     }
 
@@ -1843,6 +1846,17 @@ impl SlideApp {
         }
         self.drain_requests();
         doc_window::show(self, &ctx);
+        // Keep the window title in step with the open presentation (Lunola ecosystem convention).
+        let title = if let Some(d) = self.session.active() {
+            let dirty = if d.is_dirty() { " •" } else { "" };
+            format!("{}{} - {}", d.title(), dirty, crate::theme::LUNOLA_BRAND)
+        } else {
+            crate::theme::LUNOLA_BRAND.to_string()
+        };
+        if title != self.sent_title {
+            ctx.send_viewport_cmd(egui::ViewportCommand::Title(title.clone()));
+            self.sent_title = title;
+        }
         self.perf.frame_ms = now_ms() - t0;
     }
 
