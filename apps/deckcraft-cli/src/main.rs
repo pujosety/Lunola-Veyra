@@ -47,7 +47,7 @@ fn main() -> ExitCode {
             },
         },
         Some("--version" | "-V" | "version") => {
-            outln!("deckcraft-cli {}", env!("CARGO_PKG_VERSION"));
+            outln!("Lunola Veyra CLI {}", env!("CARGO_PKG_VERSION"));
             ExitCode::SUCCESS
         }
         Some("info") => report(info(rest)),

@@ -177,7 +177,7 @@ fn main() -> eframe::Result {
                 return Ok(());
             }
             Startup::Version => {
-                println!("deckcraft {}", env!("CARGO_PKG_VERSION"));
+                println!("Lunola Veyra {}", env!("CARGO_PKG_VERSION"));
                 return Ok(());
             }
             Startup::Run { control_port, files, sample, show } => (control_port, files, sample, show),
