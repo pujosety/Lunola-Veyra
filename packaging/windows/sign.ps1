@@ -55,7 +55,7 @@ if (-not $haveCert -and -not $haveAzure) {
 }
 
 $script:SignTool = Find-SignTool
-$common = @('sign', '/v', '/fd', 'SHA256', '/td', 'SHA256', '/d', 'Lunola Veyra', '/du', 'https://github.com/lunola/deckcraft')
+$common = @('sign', '/v', '/fd', 'SHA256', '/td', 'SHA256', '/d', 'Lunola Veyra', '/du', 'https://github.com/pujosety/Lunola-Veyra')
 $tmp = Join-Path ([IO.Path]::GetTempPath()) "deckcraft-sign-$PID"
 New-Item -ItemType Directory -Force -Path $tmp | Out-Null
 

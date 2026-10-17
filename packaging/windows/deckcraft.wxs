@@ -52,7 +52,7 @@
         </File>
 
         <!-- .deckcraft: Lunola Veyra's own format. -->
-        <ProgId Id="Lunola Veyra.Presentation" Description="Lunola Veyra Presentation" Icon="DeckcraftExe" IconIndex="0">
+        <ProgId Id="LunolaVeyra.Presentation" Description="Lunola Veyra Presentation" Icon="DeckcraftExe" IconIndex="0">
           <Extension Id="deckcraft" ContentType="application/x-deckcraft">
             <Verb Id="open" Command="Open" TargetFile="DeckcraftExe" Argument="&quot;%1&quot;" />
           </Extension>
