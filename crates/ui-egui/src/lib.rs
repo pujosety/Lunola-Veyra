@@ -16,6 +16,7 @@ pub mod doc_window;
 pub mod eyedropper;
 pub mod fillui;
 pub mod icons;
+pub mod lunola;
 pub mod media;
 pub mod menus;
 pub mod notes;
