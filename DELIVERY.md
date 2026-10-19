@@ -17,10 +17,10 @@ documentation.
 
 ## Phase 1: Rebrand and identity
 
-**Commit:** `4425ab3` — Rebrand: DeckCraft → Lunola Veyra, ArtCraft → Lunola
+**Commit:** `4425ab3` — Rebrand: DeckCraft → Lunola Veyra, lunola → Lunola
 
 - Renamed the product from DeckCraft to Lunola Veyra across the codebase.
-- Renamed the parent brand from ArtCraft to Lunola.
+- Renamed the parent brand from lunola to Lunola.
 - Updated all user-facing strings, window titles, and about-box text.
 - Preserved the CLI binary name `deckcraft-cli` for backward compatibility.
 - No changes to file format IDs or crate names.
