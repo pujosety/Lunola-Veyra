@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://lunola.com/">
+  <a href="https://lunola.wasmer.app/">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="docs/brand/lunola-logo-white.svg">
       <img alt="Lunola" src="docs/brand/lunola-logo.svg" width="200">
@@ -32,9 +32,9 @@
 </p>
 
 <p align="center">
-  <a href="https://lunola.com/apps/lunola-veyra"><b>Lunola Veyra on lunola.com</b></a> ·
-  <a href="https://lunola.com/">Lunola</a> ·
-  <a href="https://lunola.com/apps">All Crafting Apps</a>
+  <a href="https://lunola.wasmer.app/apps/lunola-veyra"><b>Lunola Veyra on lunola.wasmer.app</b></a> ·
+  <a href="https://lunola.wasmer.app/">Lunola</a> ·
+  <a href="https://lunola.wasmer.app/apps">All Crafting Apps</a>
 </p>
 
 > [!NOTE]
@@ -239,21 +239,21 @@ RISC-V 64 (riscv64): `deckcraft-<ver>-linux-riscv64.tar.gz`, a tarball only (cro
 ## The Crafting Apps
 
 Lunola Veyra is one of the **Crafting Apps**: free, open-source creative tools from the
-[Lunola](https://lunola.com/) team, each written from scratch in Rust and each able to
+[Lunola](https://lunola.wasmer.app/) team, each written from scratch in Rust and each able to
 stand on its own.
 
 | | App | What it's for | Code | Learn more |
 |:-:|---|---|---|---|
-| <img src="https://raw.githubusercontent.com/lunola/photocraft/main/assets/app-icon/hicolor/64x64/apps/ai.storyteller.photocraft.png" alt="" width="32" height="32"> | **PhotoCraft** | Image editing: layers, masks, type and real PSD files | [GitHub](https://github.com/lunola/photocraft) | [Website](https://lunola.com/apps/photocraft) |
-| <img src="https://raw.githubusercontent.com/lunola/vectorcraft/main/assets/app-icon/hicolor/64x64/apps/ai.storyteller.vectorcraft.png" alt="" width="32" height="32"> | **VectorCraft** | Vector illustration | [GitHub](https://github.com/lunola/vectorcraft) | [Website](https://lunola.com/apps/vectorcraft) |
-| <img src="https://raw.githubusercontent.com/lunola/filmcraft/main/assets/app-icon/hicolor/64x64/apps/ai.storyteller.filmcraft.png" alt="" width="32" height="32"> | **FilmCraft** | Video editing, color and sound | [GitHub](https://github.com/lunola/filmcraft) | [Website](https://lunola.com/apps/filmcraft) |
-| <img src="https://raw.githubusercontent.com/lunola/lightcraft/main/assets/app-icon/hicolor/64x64/apps/ai.storyteller.lightcraft.png" alt="" width="32" height="32"> | **LightCraft** | Photo library and raw development | [GitHub](https://github.com/lunola/lightcraft) | [Website](https://lunola.com/apps/lightcraft) |
-| <img src="https://raw.githubusercontent.com/lunola/pdfcraft/main/assets/app-icon/hicolor/64x64/apps/ai.storyteller.pdfcraft.png" alt="" width="32" height="32"> | **PdfCraft** | Reading, organizing and protecting PDFs | [GitHub](https://github.com/lunola/pdfcraft) | [Website](https://lunola.com/apps/pdfcraft) |
-| <img src="https://raw.githubusercontent.com/lunola/effectcraft/main/assets/app-icon/hicolor/64x64/apps/ai.storyteller.effectcraft.png" alt="" width="32" height="32"> | **EffectCraft** | Motion graphics and visual effects | [GitHub](https://github.com/lunola/effectcraft) | [Website](https://lunola.com/apps/effectcraft) |
-| <img src="https://raw.githubusercontent.com/lunola/designcraft/main/assets/app-icon/hicolor/64x64/apps/ai.storyteller.designcraft.png" alt="" width="32" height="32"> | **DesignCraft** | Page layout and publishing | [GitHub](https://github.com/lunola/designcraft) | [Website](https://lunola.com/apps/designcraft) |
-| <img src="https://raw.githubusercontent.com/lunola/deckcraft/main/assets/app-icon/hicolor/64x64/apps/ai.storyteller.deckcraft.png" alt="" width="32" height="32"> | **Lunola Veyra** | **Presentations and slide shows · you are here** | [GitHub](https://github.com/lunola/deckcraft) | [Website](https://lunola.com/apps/deckcraft) |
+| <img src="https://raw.githubusercontent.com/lunola/photocraft/main/assets/app-icon/hicolor/64x64/apps/ai.storyteller.photocraft.png" alt="" width="32" height="32"> | **PhotoCraft** | Image editing: layers, masks, type and real PSD files | [GitHub](https://github.com/lunola/photocraft) | [Website](https://lunola.wasmer.app/apps/photocraft) |
+| <img src="https://raw.githubusercontent.com/lunola/vectorcraft/main/assets/app-icon/hicolor/64x64/apps/ai.storyteller.vectorcraft.png" alt="" width="32" height="32"> | **VectorCraft** | Vector illustration | [GitHub](https://github.com/lunola/vectorcraft) | [Website](https://lunola.wasmer.app/apps/vectorcraft) |
+| <img src="https://raw.githubusercontent.com/lunola/filmcraft/main/assets/app-icon/hicolor/64x64/apps/ai.storyteller.filmcraft.png" alt="" width="32" height="32"> | **FilmCraft** | Video editing, color and sound | [GitHub](https://github.com/lunola/filmcraft) | [Website](https://lunola.wasmer.app/apps/filmcraft) |
+| <img src="https://raw.githubusercontent.com/lunola/lightcraft/main/assets/app-icon/hicolor/64x64/apps/ai.storyteller.lightcraft.png" alt="" width="32" height="32"> | **LightCraft** | Photo library and raw development | [GitHub](https://github.com/lunola/lightcraft) | [Website](https://lunola.wasmer.app/apps/lightcraft) |
+| <img src="https://raw.githubusercontent.com/lunola/pdfcraft/main/assets/app-icon/hicolor/64x64/apps/ai.storyteller.pdfcraft.png" alt="" width="32" height="32"> | **PdfCraft** | Reading, organizing and protecting PDFs | [GitHub](https://github.com/lunola/pdfcraft) | [Website](https://lunola.wasmer.app/apps/pdfcraft) |
+| <img src="https://raw.githubusercontent.com/lunola/effectcraft/main/assets/app-icon/hicolor/64x64/apps/ai.storyteller.effectcraft.png" alt="" width="32" height="32"> | **EffectCraft** | Motion graphics and visual effects | [GitHub](https://github.com/lunola/effectcraft) | [Website](https://lunola.wasmer.app/apps/effectcraft) |
+| <img src="https://raw.githubusercontent.com/lunola/designcraft/main/assets/app-icon/hicolor/64x64/apps/ai.storyteller.designcraft.png" alt="" width="32" height="32"> | **DesignCraft** | Page layout and publishing | [GitHub](https://github.com/lunola/designcraft) | [Website](https://lunola.wasmer.app/apps/designcraft) |
+| <img src="https://raw.githubusercontent.com/lunola/deckcraft/main/assets/app-icon/hicolor/64x64/apps/ai.storyteller.deckcraft.png" alt="" width="32" height="32"> | **Lunola Veyra** | **Presentations and slide shows · you are here** | [GitHub](https://github.com/lunola/deckcraft) | [Website](https://lunola.wasmer.app/apps/deckcraft) |
 
-And [**Lunola**](https://lunola.com/) itself, our AI image and video studio for artists who want real control.
+And [**Lunola**](https://lunola.wasmer.app/) itself, our AI image and video studio for artists who want real control.
 
 <br>
 
@@ -272,9 +272,9 @@ And [**Lunola**](https://lunola.com/) itself, our AI image and video studio for 
 
 <p align="center">
   <a href="https://discord.gg/lunola"><b>discord.gg/lunola</b></a> ·
-  <a href="https://lunola.com/">lunola.com</a> ·
-  <a href="https://lunola.com/apps">The Crafting Apps</a> ·
-  <a href="https://lunola.com/apps/lunola-veyra">Lunola Veyra</a>
+  <a href="https://lunola.wasmer.app/">lunola.wasmer.app</a> ·
+  <a href="https://lunola.wasmer.app/apps">The Crafting Apps</a> ·
+  <a href="https://lunola.wasmer.app/apps/lunola-veyra">Lunola Veyra</a>
 </p>
 
 ## License and credits
@@ -296,6 +296,6 @@ Forks and modified versions must remove them.
 <sub>Microsoft and PowerPoint are trademarks of the Microsoft group of companies. Adobe, Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat, After Effects and InDesign are trademarks or registered trademarks of Adobe Inc. in the United States and/or other countries. Lunola Veyra is an independent, open-source project and is not affiliated with, sponsored by or endorsed by Microsoft Corporation or Adobe Inc.; these names are used only to describe the workflows it is compatible with.</sub>
 
 <p align="center">
-  <a href="https://lunola.com/"><img alt="Lunola" src="docs/brand/lunola-mark.svg" width="28"></a><br>
-  <sub>Made by the <a href="https://lunola.com/">Lunola</a> team and community.</sub>
+  <a href="https://lunola.wasmer.app/"><img alt="Lunola" src="docs/brand/lunola-mark.svg" width="28"></a><br>
+  <sub>Made by the <a href="https://lunola.wasmer.app/">Lunola</a> team and community.</sub>
 </p>

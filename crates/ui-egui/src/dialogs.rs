@@ -2614,7 +2614,7 @@ pub fn about(_app: &mut SlideApp, ui: &mut Ui) {
         ui.label("Presentations and slide shows, rebuilt from scratch in pure Rust.");
         ui.label("An open-source, clean-room project. Not affiliated with Microsoft.");
         ui.add_space(6.0);
-        ui.hyperlink_to("lunola.com/apps/lunola-veyra", deckcraft_engine::links::APP_PAGE);
+        ui.hyperlink_to("lunola.wasmer.app/apps/lunola-veyra", deckcraft_engine::links::APP_PAGE);
         ui.hyperlink_to("Source on GitHub", deckcraft_engine::links::GITHUB);
         ui.add_space(6.0);
         ui.label(egui::RichText::new("MIT OR Apache-2.0 · © 2026 Lunola Team and the Lunola Veyra contributors").size(11.0).color(t.text_faint));

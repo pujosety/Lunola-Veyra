@@ -28,8 +28,8 @@
 
     <Icon Id="DeckcraftIcon.ico" SourceFile="$(var.IconPath)" />
     <Property Id="ARPPRODUCTICON" Value="DeckcraftIcon.ico" />
-    <Property Id="ARPURLINFOABOUT" Value="https://lunola.com/apps/deckcraft" />
-    <Property Id="ARPURLUPDATEINFO" Value="https://lunola.com/apps/deckcraft" />
+    <Property Id="ARPURLINFOABOUT" Value="https://lunola.wasmer.app/apps/deckcraft" />
+    <Property Id="ARPURLUPDATEINFO" Value="https://lunola.wasmer.app/apps/deckcraft" />
     <Property Id="ARPHELPLINK" Value="https://discord.gg/lunola" />
 
     <StandardDirectory Id="ProgramFiles6432Folder">

@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Rebranding: DeckCraft → Lunola Veyra
 
 This release marks the official rebranding of DeckCraft to **Lunola Veyra**, a core
-application in the [Lunola](https://lunola.com/) ecosystem of open-source creative tools.
+application in the [Lunola](https://lunola.wasmer.app/) ecosystem of open-source creative tools.
 The product name, visual identity, and ecosystem integration are now aligned with the Lunola
 brand. The tagline is **"Make Ideas Shine."**
 

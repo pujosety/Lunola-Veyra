@@ -71,7 +71,7 @@ documentation.
 
 - Positioned Lunola Veyra as one of the Crafting Apps in the Lunola ecosystem.
 - Updated README to showcase the full Crafting Apps family.
-- Added links to lunola.com and the Lunola Discord community.
+- Added links to lunola.wasmer.app and the Lunola Discord community.
 - Ensured consistent branding across all ecosystem touchpoints.
 
 ## Phase 7: Delivery documentation
